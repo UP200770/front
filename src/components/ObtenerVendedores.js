@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const ObtenerVendedores = () => {
+const ObtenerVendedores = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -52,3 +52,5 @@ export const ObtenerVendedores = () => {
   </div>
   );
 }
+
+export default ObtenerVendedores

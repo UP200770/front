@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const BuscarActualizarEliminarVendedor = () => {
+const BuscarActualizarEliminarVendedor = () => {
   const [idVendedor, setIdVendedor] = useState('');
   const [nombre, setNombre] = useState('');
   const [apellidoPaterno, setApellidoPaterno] = useState('');
@@ -133,3 +133,5 @@ export const BuscarActualizarEliminarVendedor = () => {
 </div>
   );
 }
+
+export default BuscarActualizarEliminarVendedor
