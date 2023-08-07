@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const AgregarConstructora = () => {
+const AgregarConstructora = () => {
   const [razon_social, setRazon_social] = useState('');
   const [representante, setRepresentante] = useState('');
   const [contacto, setContacto] = useState('');
@@ -77,3 +77,4 @@ export const AgregarConstructora = () => {
   );
 }
 
+export default AgregarConstructora

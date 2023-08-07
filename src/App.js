@@ -1,6 +1,8 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { ObtenerVendedores } from './components/ObtenerVendedores';
-import { AgregarVendedor } from './components/AgregarVendedor';
+import Vendedores from './components/Venedores/Vendedores'
+import Casas from './components/Casas/Casas'
+import Constructoras from './components/Constructoras/Constructoras'
+import Clientes from './components/Clientes/Clientes'
 import { BuscarActualizarEliminarVendedor } from './components/BuscarActualizarEliminarVendedor';
 import { ObtenerCasas } from './components/ObtenerCasas';
 import { AgregarCasa } from './components/AgregarCasa';
@@ -12,11 +14,35 @@ import { ObtenerConstructoras } from './components/ObtenerConstructoras';
 import { AgregarConstructora } from './components/AgregarConstructora';
 import { BuscarActualizarEliminarConstructora } from './components/BuscarActualizarEliminarConstructora';
 import {Home} from './components/Home'
+
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  createBrowserRouter,
+  RouterProvider,
+  Outlet,
+} from 'react-router-dom';
+
+
 function App() {
+  const router = createBrowserRouter([
+    {
+      children: [
+        { path: '/', element: <Home /> },
+        { path: '/vendedores', element: <Vendedores /> },
+        { path: '/casas', element: <Casas /> },
+        { path: '/constructoras', element: <Constructoras /> },
+        { path: '/clientes', element: <Clientes/> }
+      ],
+    },
+  ]);
+
   return (
     <div class="container">
       <div class="row">
-        <div class="col-md-12">
+      <RouterProvider router={router} />
+        {/* <div class="col-md-12">
           <div class="card">
             <div class="card-body bg-danger">
             <Home/>
@@ -122,7 +148,7 @@ function App() {
             </div>
           </div>
         </div>
-      </div>
+ */}      </div>
     </div>
   );
 }

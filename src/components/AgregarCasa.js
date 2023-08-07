@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const AgregarCasa = () => {
+const AgregarCasa = () => {
   const [tipo, setTipo] = useState('');
   const [direccion, setDireccion] = useState('');
   const [ancho, setAncho] = useState('');
@@ -61,3 +61,4 @@ export const AgregarCasa = () => {
   );
 };
 
+export default AgregarCasa

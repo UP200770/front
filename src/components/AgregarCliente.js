@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const AgregarCliente = () => {
+const AgregarCliente = () => {
   const [nombre, setNombre] = useState('');
   const [apellidoPaterno, setApellidoPaterno] = useState('');
   const [apellidoMaterno, setApellidoMaterno] = useState('');
@@ -86,3 +86,5 @@ export const AgregarCliente = () => {
   </div>
   );
 }
+
+export default AgregarCliente

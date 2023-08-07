@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-export const AgregarVendedor = () => {
+const AgregarVendedor = () => {
   const [nombre, setNombre] = useState('');
   const [apellidoPaterno, setApellidoPaterno] = useState('');
   const [apellidoMaterno, setApellidoMaterno] = useState('');
@@ -85,3 +85,5 @@ export const AgregarVendedor = () => {
   </div>
   );
 }
+
+export default AgregarVendedor

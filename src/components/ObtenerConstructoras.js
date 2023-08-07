@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-export const ObtenerConstructoras = () => {
+const ObtenerConstructoras = () => {
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -50,3 +50,5 @@ export const ObtenerConstructoras = () => {
   </div>
   );
 }
+
+export default ObtenerConstructoras
